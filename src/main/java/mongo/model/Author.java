@@ -1,4 +1,4 @@
-package test.model;
+package mongo.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

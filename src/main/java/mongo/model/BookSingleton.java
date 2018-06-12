@@ -1,4 +1,4 @@
-package test.model;
+package mongo.model;
 
 public class BookSingleton {
 	private static BookSingleton instance;

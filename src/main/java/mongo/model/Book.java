@@ -1,4 +1,4 @@
-package test.model;
+package mongo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +14,7 @@ public class Book {
     private String _id;
     private String title;
     private Double price;
+    private Author author;
 	public String getTitle() {
 		return title;
 	}
@@ -34,11 +35,19 @@ public class Book {
 	public Book() {
 		
 	}
+	
+	public Book(String title, Double price, Author author) {
+		super();
+		this.title = title;
+		this.price = price;
+		this.author = author;
+	}
 	@Override
     public String toString() {
         return "Book{" +
                 ", title='" + title + '\'' +
                 ", price=" + price +
+                 ", author=" + author.getName() +
                 '}';
     }
     

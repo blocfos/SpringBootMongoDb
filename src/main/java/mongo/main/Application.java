@@ -1,4 +1,4 @@
-package test.main;
+package mongo.main;
 
 import java.util.Arrays;
 
@@ -15,18 +15,18 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import test.model.Book;
-import test.model.BookSingleton;
-import test.repository.BookRepository;
-import test.service.BookService;
-import test.service.BookServiceImp;
+import mongo.model.Book;
+import mongo.model.BookSingleton;
+import mongo.repository.BookRepository;
+import mongo.service.BookService;
+import mongo.service.BookServiceImp;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan({"test.service", "test.repository"})
-@EntityScan("test.model")
+@ComponentScan({"mongo.service", "mongo.repository"})
+@EntityScan("mongo.model")
 //@EnableJpaRepositories(repositoryFactoryBeanClass=BookRepository.class)
-@EnableMongoRepositories("test.repository")
+@EnableMongoRepositories("mongo.repository")
 public class Application {
 
 	@Autowired
@@ -46,12 +46,12 @@ public class Application {
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-        	//bookService.deleteAllBook();
-        	//bookService.generateBooksNoPersis();
-        	//bookService.generateBooks();
-        	//bookService.getAllBook();
+        	bookService.deleteAllBook();
+        	bookService.generateBooksNoPersis();
+        	bookService.generateBooks();
+        	bookService.getAllBook();
         	//this.testJava();
-        	this.testSingleton();
+        	//this.testSingleton();
         	
         };
     }

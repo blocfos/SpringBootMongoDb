@@ -1,4 +1,4 @@
-package test.service;
+package mongo.service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,15 +7,13 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-import test.model.Book;
-import test.repository.*;
+import mongo.model.Book;
+import mongo.repository.*;
 
 @Component
-@Primary
-public class BookServiceImp implements BookService{
+public class BookServiceMongoImp implements BookService{
 
 	@Autowired 
 	private BookRepository bookRepository; 

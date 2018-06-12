@@ -1,7 +1,7 @@
-package test.service;
+package mongo.service;
 import java.util.List;
 
-import test.model.Book;
+import mongo.model.Book;
 public interface BookService {
 	public List<Book> getBookByTitle(String title);
 	public void generateBooks();

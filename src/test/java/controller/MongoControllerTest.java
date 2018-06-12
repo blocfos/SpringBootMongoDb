@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import test.controller.MongoController;
+import mongo.controller.MongoController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=MongoController.class)
